@@ -10033,8 +10033,7 @@ $.jgrid.extend({
 				if(grp.showSummaryOnHide) {
 					if(r){
 						while(r) {
-							itemGroupingLevel = getGroupingLevelFromClass(r.className);
-							if (itemGroupingLevel !== undefined && itemGroupingLevel <= num) {
+							if (parseInt($(r).attr("jqfootlevel"), 10) == 0) {
 								break;
 							}
 							$(r).hide();
